@@ -1,7 +1,7 @@
 // Driver.cpp : This file contains the 'main' function
 //This file uses neural network for AND operation
 
-#include "Neural.h"
+#include "MLP.h"
 
 int main(){
     srand(time(NULL));

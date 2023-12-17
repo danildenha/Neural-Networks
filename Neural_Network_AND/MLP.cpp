@@ -1,4 +1,4 @@
-#include "Neural.h"
+#include "MLP.h"
 
 double frand(){
 	return (2.0*(double)rand() / RAND_MAX) - 1.0;
