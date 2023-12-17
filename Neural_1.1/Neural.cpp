@@ -15,5 +15,6 @@ Perceptron::Perceptron(size_t inputs, double bias){
 // Run the perceptron. x is a vector with the input values.
 double Perceptron::run(std::vector<double> x){
 	x.push_back(bias);
-    
+    double sum = inner_product(x.begin(), x.end(), weights.begin(), (double)0.0);
+    return sigmoid(sum);
 }
