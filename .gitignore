@@ -6,3 +6,4 @@ npm-debug.log
 *.yml
 Source/Neural_Network_AND/NeuralNetworks.dSYM/Contents/Resources/Relocations/aarch64/NeuralNetworks.yml
 Source/Neural_Network_AND/NeuralNetworks.dSYM/Contents/Resources/DWARF/NeuralNetworks
+*.yml
