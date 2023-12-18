@@ -87,6 +87,7 @@
       "xtr1common": "cpp",
       "xutility": "cpp",
       "stack": "cpp"
-    }
+    },
+    "cmake.useCMakePresets": "never"
   }
   
