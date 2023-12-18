@@ -1,5 +1,5 @@
-// Driver.cpp : This file contains the 'main' function
-//This file uses neural network for AND operation
+// Neural_NetworksOR.cpp : This file contains the 'main' function
+//This file uses neural network for OR operation
 
 #include "MLP.h"
 
