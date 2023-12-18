@@ -10,7 +10,7 @@ int main(){
     std::cout << "\n\n--------Logic OR Gate Example----------------\n\n";
     Perceptron p(2);
 
-    p.set_weights({20.0,20.0,-10.0}); //AND
+    p.set_weights({15.0,15.0,-10.0}); //AND
 
     std::cout << "Gate: " << std::endl;
     std::cout << p.run({0.0,0.0}) << std::endl;
