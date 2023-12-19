@@ -76,15 +76,9 @@ std::vector<double> MultiLayerPerceptron::run(std::vector<double> x) {
     return values.back();
 }
 
-
-// Challenge: Implement the bp() function:
-
-
 // Run a single (x,y) pair with the backpropagation algorithm.
 double MultiLayerPerceptron::bp(std::vector<double> x, std::vector<double> y){
-    
     // Backpropagation Step by Step:
-    
     // STEP 1: Feed a sample to the network
     
     // STEP 2: Calculate the MSE
