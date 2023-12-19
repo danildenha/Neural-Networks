@@ -80,6 +80,7 @@ std::vector<double> MultiLayerPerceptron::run(std::vector<double> x) {
 double MultiLayerPerceptron::bp(std::vector<double> x, std::vector<double> y){
     // Backpropagation Step by Step:
     // STEP 1: Feed a sample to the network
+    std::vector<double> outputs = run(x);
     
     // STEP 2: Calculate the MSE
     double MSE = 0.0;
