@@ -81,9 +81,15 @@ double MultiLayerPerceptron::bp(std::vector<double> x, std::vector<double> y){
     // Backpropagation Step by Step:
     // STEP 1: Feed a sample to the network
     std::vector<double> outputs = run(x);
-    
     // STEP 2: Calculate the MSE
-    double MSE = 0.0;
+    std::vector<double> error;
+    //to access y.at(i) and outputs.at(i)
+    double MSE{0.0};
+    for (unsigned int i{0}; i < outputs.size(); i++) {
+        error.emplace_back(y[i] - outputs[i]);
+        MSE += error[i] * error[i];
+    }
+    MSE /= layers.back();
     
     // STEP 3: Calculate the output error terms
     
