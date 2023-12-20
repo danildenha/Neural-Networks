@@ -77,13 +77,13 @@ std::vector<double> MultiLayerPerceptron::run(std::vector<double> x) {
 }
 
 // Run a single (x,y) pair with the backpropagation algorithm.
+// x is the input value, y is output
 double MultiLayerPerceptron::bp(std::vector<double> x, std::vector<double> y){
-    // Backpropagation Step by Step:
-    // STEP 1: Feed a sample to the network
+    // Feeding a sample to the network
     std::vector<double> outputs = run(x);
-    // STEP 2: Calculate the MSE
+
+    // Calculating the Mean Squared Error
     std::vector<double> error;
-    //to access y.at(i) and outputs.at(i)
     double MSE{0.0};
     for (unsigned int i{0}; i < outputs.size(); i++) {
         error.emplace_back(y[i] - outputs[i]);
@@ -91,15 +91,17 @@ double MultiLayerPerceptron::bp(std::vector<double> x, std::vector<double> y){
     }
     MSE /= layers.back();
     
-    // STEP 3: Calculate the output error terms
-    
+    // Calculating the output error terms
+    for (unsigned int i{0}; i < outputs.size(); i--) {
+        d.back()[i] = outputs[i] * (1 - outputs[i]) * error[i];
+    }
     // STEP 4: Calculate the error term of each unit on each layer    
     for (size_t i = network.size()-2; i > 0; i--)
         for (size_t h = 0; h < network[i].size(); h++){
             double fwd_error = 0.0;
             for (size_t k = 0; k < layers[i+1]; k++)
-                ; // fill in the blank
-            ; // fill in the blank
+                fwd_error += network[i+1][k].weights[h] * d[i+1][k];
+            d[i][h] = values[i][h] * (1-values[i][h]) * fwd_error;
         }
     
     // STEPS 5 & 6: Calculate the deltas and update the weights
