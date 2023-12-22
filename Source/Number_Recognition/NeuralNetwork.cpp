@@ -95,24 +95,6 @@ int main(){
     MultiLayerPerceptron mlp2 = MultiLayerPerceptron({7,7,10});
     MultiLayerPerceptron mlp3 = MultiLayerPerceptron({7,7,7});
 
-    // Dataset for the 7 to 1 network
-    std::cout << "Training 7 to 1 network..." << std::endl;
-    for (int i = 0; i < epochs; i++){
-        MSE = 0.0;
-        MSE += mlp1.bp({1,1,1,1,1,1,0}, {0.05}); //0 pattern
-        MSE += mlp1.bp({0,1,1,0,0,0,0}, {0.15}); //1 pattern
-        MSE += mlp1.bp({1,1,0,1,1,0,1}, {0.25}); //2 pattern
-        MSE += mlp1.bp({1,1,1,1,0,0,1}, {0.35}); //3 pattern
-        MSE += mlp1.bp({0,1,1,0,0,1,1}, {0.45}); //4 pattern
-        MSE += mlp1.bp({1,0,1,1,0,1,1}, {0.55}); //5 pattern
-        MSE += mlp1.bp({1,0,1,1,1,1,1}, {0.65}); //6 pattern
-        MSE += mlp1.bp({1,1,1,0,0,0,0}, {0.75}); //7 pattern
-        MSE += mlp1.bp({1,1,1,1,1,1,1}, {0.85}); //8 pattern
-        MSE += mlp1.bp({1,1,1,1,0,1,1}, {0.95}); //9 pattern
-    }
-    MSE /= 10.0;
-    std::cout << std::endl << "7 to 1  network MSE: " << MSE << std::endl << std::endl;
-
 
     // Dataset for the 7 to 10 network
     std::cout << "Training 7 to 10 network..." << std::endl;
