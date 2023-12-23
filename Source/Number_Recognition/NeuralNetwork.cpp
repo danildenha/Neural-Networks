@@ -97,23 +97,6 @@ int main(){
 
 
     // Dataset for the 7 to 10 network
-    std::cout << "Training 7 to 10 network..." << std::endl;
-    
-    for (int i = 0; i < epochs; i++){
-        MSE = 0.0;
-        MSE += mlp2.bp({1,1,1,1,1,1,0}, {1,0,0,0,0,0,0,0,0,0}); //0 pattern
-        MSE += mlp2.bp({0,1,1,0,0,0,0}, {0,1,0,0,0,0,0,0,0,0}); //1 pattern
-        MSE += mlp2.bp({1,1,0,1,1,0,1}, {0,0,1,0,0,0,0,0,0,0}); //2 pattern
-        MSE += mlp2.bp({1,1,1,1,0,0,1}, {0,0,0,1,0,0,0,0,0,0}); //3 pattern
-        MSE += mlp2.bp({0,1,1,0,0,1,1}, {0,0,0,0,1,0,0,0,0,0}); //4 pattern
-        MSE += mlp2.bp({1,0,1,1,0,1,1}, {0,0,0,0,0,1,0,0,0,0}); //5 pattern
-        MSE += mlp2.bp({1,0,1,1,1,1,1}, {0,0,0,0,0,0,1,0,0,0}); //6 pattern
-        MSE += mlp2.bp({1,1,1,0,0,0,0}, {0,0,0,0,0,0,0,1,0,0}); //7 pattern
-        MSE += mlp2.bp({1,1,1,1,1,1,1}, {0,0,0,0,0,0,0,0,1,0}); //8 pattern
-        MSE += mlp2.bp({1,1,1,1,0,1,1}, {0,0,0,0,0,0,0,0,0,1}); //9 pattern
-    }
-    MSE /= 10.0;
-    std::cout << "7 to 10 network MSE: " << MSE << std::endl << std::endl;
 
     
     // Dataset for the 7 to 7 network
