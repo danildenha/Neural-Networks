@@ -96,9 +96,6 @@ int main(){
     MultiLayerPerceptron mlp3 = MultiLayerPerceptron({7,7,7});
 
 
-    // Dataset for the 7 to 10 network
-
-    
     // Dataset for the 7 to 7 network
     std::cout << "Training 7 to 7 network..." << std::endl;
 
