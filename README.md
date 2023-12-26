@@ -18,13 +18,14 @@ Neural networks are computational models inspired by the human brain's structure
 
 3. **Neural_NetworkOR**
     - Contains a neural network for the logical OR operation.
+  
+4. **Training_Network_BP**
+    - Provides an implementation for training neural networks using **backpropagation**.
 
-4. **Number_Recognition**
+5. **Number_Recognition**
     - Focuses on recognizing numbers based on segmented display patterns using neural networks.
     - Utilizes three different network output methods: **7 to 1, 7 to 7, and 7 to 10**.
-
-5. **Training_Network_BP**
-    - Provides an implementation for training neural networks using **backpropagation**.
+    - During training, the concept of **epochs** is utilized. An epoch represents one complete cycle through the entire dataset during training.
 
 ## Understanding Neural Networks
 
