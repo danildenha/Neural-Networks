@@ -78,12 +78,6 @@ int main(){
     std::cout << "\n\nTrained weights (Compare to hardcoded weights):\n\n";
     mlp.print_weights();
 
-    std::cout << "XOR:" << std::endl;
-    std::cout << "0 0 = " << mlp.run({0,0})[0] << std::endl;
-    std::cout << "0 1 = " << mlp.run({0,1})[0] << std::endl;
-    std::cout << "1 0 = " << mlp.run({1,0})[0] << std::endl;
-    std::cout << "1 1 = " << mlp.run({1,1})[0] << std::endl;
-
 
     // Test code - Segment Display Recognition System
 
