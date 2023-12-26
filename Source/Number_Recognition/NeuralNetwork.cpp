@@ -33,12 +33,6 @@ int main(){
     std::cout << "\n\n--------Logic Gate Example----------------\n\n";
     Perceptron p(2);
 
-    // AND:  {10,10,-15}
-    // OR:   {15,15,-10}
-    // NOR:  {-15,-15,10}
-    // NAND: {-10,-10,15}
-    
-
 
     // Test code - Segment Display Recognition System
 
