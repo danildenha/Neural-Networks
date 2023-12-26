@@ -52,17 +52,6 @@ int main(){
     std::cout << "Hardcoded weights:" << std::endl;
     mlp.print_weights();
 
-    std::cout << "XOR:" << std::endl;
-    std::cout << "0 0 = " << mlp.run({0,0})[0]<<std::endl;
-    std::cout << "0 1 = " << mlp.run({0,1})[0]<<std::endl;
-    std::cout << "1 0 = " << mlp.run({1,0})[0]<<std::endl;
-    std::cout << "1 1 = " << mlp.run({1,1})[0]<<std::endl;
-
-
-    // Test code - Trained XOR
-    std::cout << "\n\n--------Trained XOR Example----------------\n\n";
-    mlp = MultiLayerPerceptron({2,2,1});
-    std::cout << "Training Neural Network as an XOR Gate..." << std::endl;
     double MSE;
 
 
