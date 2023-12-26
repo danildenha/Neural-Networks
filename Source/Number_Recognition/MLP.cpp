@@ -28,7 +28,6 @@ double Perceptron::sigmoid(double x){
 	return 1.0/(1.0 + exp(-x));
 }
 
-
 // Return a new MultiLayerPerceptron object with the specified parameters.
 MultiLayerPerceptron::MultiLayerPerceptron(std::vector<size_t> layers, double bias, double eta) {
     this->layers = layers;
