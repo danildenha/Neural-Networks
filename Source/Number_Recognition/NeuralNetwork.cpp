@@ -25,6 +25,7 @@ std::vector<double> read_vector(){
 }
 
 int main(){
+    
     // Test code - Segment Display Recognition System
 
     std::cout << std::endl << "Segment Display Recognition System" << std::endl;
@@ -40,6 +41,7 @@ int main(){
 
     // Dataset for the 7 to 7 network
     std::cout << "Training 7 to 7 network..." << std::endl;
+    double MSE;
 
     for (int i = 0; i < epochs; i++){
         MSE = 0.0;
