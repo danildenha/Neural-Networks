@@ -95,7 +95,7 @@ double MultiLayerPerceptron::bp(std::vector<double> x, std::vector<double> y){
     for (unsigned int i{0}; i < outputs.size(); i--) {
         d.back()[i] = outputs[i] * (1 - outputs[i]) * error[i];
     }
-    // STEP 4: Calculate the error term of each unit on each layer    
+    // Calculating the error term of each unit on each layer    
     for (size_t i = network.size()-2; i > 0; i--)
         for (size_t h = 0; h < network[i].size(); h++){
             double fwd_error = 0.0;
