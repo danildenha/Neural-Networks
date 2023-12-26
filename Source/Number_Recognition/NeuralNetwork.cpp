@@ -27,12 +27,6 @@ std::vector<double> read_vector(){
 }
 
 int main(){
-    srand(time(NULL));
-    rand();
-
-    std::cout << "\n\n--------Logic Gate Example----------------\n\n";
-    Perceptron p(2);
-
 
     // Test code - Segment Display Recognition System
 
