@@ -37,29 +37,15 @@ int main(){
     // OR:   {15,15,-10}
     // NOR:  {-15,-15,10}
     // NAND: {-10,-10,15}
-
-    p.set_weights({15,15,-10});
-
-    std::cout << "Gate: " << std::endl;
-    std::cout << p.run({0,0}) << std::endl;
-    std::cout << p.run({0,1}) << std::endl;
-    std::cout << p.run({1,0}) << std::endl;
-    std::cout << p.run({1,1}) << std::endl;
-
-    std::cout << "\n\n--------Hardcoded XOR Example----------------\n\n";
-    MultiLayerPerceptron mlp({2,2,1});
-    mlp.set_weights({{{-10,-10,15},{15,15,-10}}, {{10,10,-15}}});
-    std::cout << "Hardcoded weights:" << std::endl;
-    mlp.print_weights();
-
-    double MSE;
+    
 
 
     // Test code - Segment Display Recognition System
 
+    size_t epochs;
+    double MSE;
     std::cout << std::endl << "Segment Display Recognition System" << std::endl;
     std::cout << "How many epochs? ";
-    size_t epochs;
     std::cin >> epochs;
     std::cin.ignore();
     
