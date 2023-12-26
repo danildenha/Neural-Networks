@@ -58,7 +58,6 @@ int main(){
     MSE /= 10.0;
     std::cout << std::endl << "7 to 1  network MSE: " << MSE << std::endl << std::endl;
 
-
     // Dataset for the 7 to 10 network
     std::cout << "Training 7 to 10 network..." << std::endl;
     
@@ -77,7 +76,6 @@ int main(){
     }
     MSE /= 10.0;
     std::cout << "7 to 10 network MSE: " << MSE << std::endl << std::endl;
-
     
     // Dataset for the 7 to 7 network
     std::cout << "Training 7 to 7 network..." << std::endl;
@@ -99,7 +97,6 @@ int main(){
     std::cout << "7 to 7  network MSE: " << MSE << std::endl << std::endl;
 
     // Test the Classifiers
-
     std::vector<double> pattern = {1.2};
     while(pattern[0] >= 0.0){
         pattern = read_vector();
