@@ -75,9 +75,6 @@ int main(){
             std::cout << "MSE = " << MSE << std::endl;
     }
 
-    std::cout << "\n\nTrained weights (Compare to hardcoded weights):\n\n";
-    mlp.print_weights();
-
 
     // Test code - Segment Display Recognition System
 
