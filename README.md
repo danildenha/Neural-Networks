@@ -2,6 +2,8 @@
 
 This repository hosts various projects showcasing the implementation of **neural networks** in C++. These projects demonstrate the fundamental concepts of neural networks applied to logical operations and number recognition tasks.
 
+![Neural Network](https://www.ibm.com/content/dam/connectedassets-adobe-cms/worldwide-content/cdp/cf/ul/g/3a/b8/ICLH_Diagram_Batch_01_03-DeepNeuralNetwork.component.simple-narrative-xl.ts=1694627445038.png/content/adobe-cms/id/en/topics/neural-networks/jcr:content/root/table_of_contents/intro/simple_narrative/image)
+
 ## Neural Networks and Their Applications
 
 Neural networks are computational models inspired by the human brain's structure and function. They consist of interconnected nodes (neurons) that process and transmit information. These networks are capable of learning patterns, making them invaluable in various fields such as pattern recognition, classification, and prediction.
