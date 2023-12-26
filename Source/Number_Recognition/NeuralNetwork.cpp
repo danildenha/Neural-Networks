@@ -64,16 +64,6 @@ int main(){
     mlp = MultiLayerPerceptron({2,2,1});
     std::cout << "Training Neural Network as an XOR Gate..." << std::endl;
     double MSE;
-    for (int i = 0; i < 3000; i++){
-        MSE = 0.0;
-        MSE += mlp.bp({0,0},{0});
-        MSE += mlp.bp({0,1},{1});
-        MSE += mlp.bp({1,0},{1});
-        MSE += mlp.bp({1,1},{0});
-        MSE = MSE / 4.0;
-        if (i % 100 == 0)
-            std::cout << "MSE = " << MSE << std::endl;
-    }
 
 
     // Test code - Segment Display Recognition System
