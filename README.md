@@ -78,5 +78,3 @@ The Back Propagation used in the `Number_Recognition` project's source code illu
                     delta = eta * d[i][j] * values[i-1][k];
                 network[i][j].weights[k] += delta;
             }
-    return MSE;
-}
