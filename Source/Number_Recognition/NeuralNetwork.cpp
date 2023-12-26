@@ -27,7 +27,6 @@ std::vector<double> read_vector(){
 }
 
 int main(){
-
     // Test code - Segment Display Recognition System
 
     size_t epochs;
