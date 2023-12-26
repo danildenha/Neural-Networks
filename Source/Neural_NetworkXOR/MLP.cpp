@@ -4,7 +4,6 @@ double frand(){
 	return (2.0*(double)rand() / RAND_MAX) - 1.0;
 }
 
-
 // Returns a new Perceptron object with the number of inputs +1 for the bias.
 Perceptron::Perceptron(size_t inputs, double bias){
 	this->bias = bias;
@@ -28,7 +27,6 @@ void Perceptron::set_weights(std::vector<double> w_init){
 double Perceptron::sigmoid(double x){
 	return 1.0/(1.0 + exp(-x));
 }
-
 
 // Returns a new MultiLayerPerceptron object with the specified parameters.
 MultiLayerPerceptron::MultiLayerPerceptron(std::vector<size_t> layers, double bias, double eta) {
