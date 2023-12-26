@@ -44,7 +44,6 @@ MultiLayerPerceptron::MultiLayerPerceptron(std::vector<size_t> layers, double bi
     }
 }
 
-
 // Set the weights. w_init is a vector of vectors of vectors with the weights for all but the input layer.
 void MultiLayerPerceptron::set_weights(std::vector<std::vector<std::vector<double> > > w_init) {
     for (size_t i = 0; i < w_init.size(); i++)
