@@ -37,10 +37,46 @@ Neural networks are computational models inspired by the human brain's structure
 
 **Mean Squared Error (MSE)** is a common metric used to evaluate the performance of neural networks during training. It measures the average squared difference between predicted and actual values. Minimizing the MSE during training is a primary goal to enhance the network's accuracy in making predictions.
 
-## Sample Code: Number Recognition
+## Sample Code: Back Propagation
 
-The `Number_Recognition` project's source code (from `NeuralNetworks.cpp`) illustrates the process of training and recognition. This project showcases the application of neural networks in recognizing numbers based on segmented display patterns.
+The Back Propagation used in the `Number_Recognition` project's source code illustrates the process of training. This code is provided with a sample (x,y) where x is the input value and y is the desired value.
 
 ```cpp
-// Sample code from NeuralNetworks.cpp demonstrating number recognition and training
-// ... (Code omitted for brevity)
+    // Feeding a sample to the network
+    std::vector<double> outputs = run(x);
+
+    // Calculating the Mean Squared Error
+    std::vector<double> error;
+    double MSE{0.0};
+    for (unsigned int i{0}; i < outputs.size(); i++) {
+        error.emplace_back(y[i] - outputs[i]);
+        MSE += error[i] * error[i];
+    }
+    MSE /= layers.back();
+    
+    // Calculating the output error terms
+    for (unsigned int i{0}; i < outputs.size(); i--) {
+        d.back()[i] = outputs[i] * (1 - outputs[i]) * error[i];
+    }
+    // STEP 4: Calculate the error term of each unit on each layer    
+    for (size_t i = network.size()-2; i > 0; i--)
+        for (size_t h = 0; h < network[i].size(); h++){
+            double fwd_error = 0.0;
+            for (size_t k = 0; k < layers[i+1]; k++)
+                fwd_error += network[i+1][k].weights[h] * d[i+1][k];
+            d[i][h] = values[i][h] * (1-values[i][h]) * fwd_error;
+        }
+    
+    // Calculating the deltas and update the weights
+    for (size_t i = 1; i < network.size(); i++)
+        for (size_t j = 0; j < layers[i]; j++)
+            for (size_t k = 0; k < layers[i-1]+1; k++){
+                double delta;
+                if (k == layers[i-1])
+                    delta = eta * d[i][j] * bias;
+                else
+                    delta = eta * d[i][j] * values[i-1][k];
+                network[i][j].weights[k] += delta;
+            }
+    return MSE;
+}
